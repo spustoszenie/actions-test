@@ -10,4 +10,4 @@ jobs:
     steps:
       - name: Log issue title
         run: |
-        echo "New issue title is: ${{ github.event.issue.title }}"
+          echo "New issue title is: ${{ github.event.issue.title }}"
