@@ -1,0 +1,15 @@
+name: Issue Logger2
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  log-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Log issue title (SECURE)
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+        run: |
+          echo "New issue title is $ISSUE_TITLE"
